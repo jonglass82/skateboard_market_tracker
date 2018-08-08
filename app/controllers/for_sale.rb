@@ -1,0 +1,6 @@
+class ForSale < ApplicationController
+    
+
+    
+
+end
