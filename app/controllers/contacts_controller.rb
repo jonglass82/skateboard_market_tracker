@@ -1,9 +1,7 @@
-class WelcomeController < ApplicationController
+class Contacts < ApplicationController
     
-#      
     def new
-      @contact = contact.new
-      
+        @contact = Contact.new
     end
     
     def create
@@ -19,11 +17,7 @@ class WelcomeController < ApplicationController
        params.require(:contact).permit(:first_name, :last_name, :email) 
     end
     
-
     
- 
     
-
+    
 end
-
-

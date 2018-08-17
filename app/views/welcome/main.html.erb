@@ -23,7 +23,34 @@
       <button>GRL</button>
       <button>SVN</button>
       <button>BLI</button>
-      </div>
-  </body>
+    </div>
+ 
+
+    <%= form_for :contact do |e| %>
+
+<!--      <p>-->
+    <%= e.label :first_name %>
+    <%= e.text_field :first_name %>
+<!--      </p>-->
+      
+<!--      <p>-->
+  <%= e.label :last_name %>
+    <%= e.text_field :last_name %>
+<!--      </p>-->
+      
+<!--      <p>-->
+  <%= e.label :email %>
+    <%= e.text_field :email %>
+<!--      </p>-->
+      
+<!--      <p>-->
+    <%= e.submit %>
+<!--      </p>-->
+      
+    <% end %>
+
+      
+       </body>
+    
 </html>
 

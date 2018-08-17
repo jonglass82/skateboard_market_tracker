@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     
     get 'welcome/main', to: 'welcome#main'
     
+    post 'welcome/main', to: 'welcome#create'
+    
     get 'welcome/news', to: 'welcome#news'
     
     get 'welcome/for_sale', to: 'welcome#for_sale'
@@ -12,5 +14,7 @@ Rails.application.routes.draw do
     get 'welcome/wanted', to: 'welcome#wanted'
     
     root 'welcome#main'
+    
+    resources :contacts
 
 end
