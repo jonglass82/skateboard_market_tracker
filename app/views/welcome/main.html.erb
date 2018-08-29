@@ -17,37 +17,69 @@
    <h1>Skateboard Market Tracker</h1>
       
     <div class="container">
-      <button>SCS</button>
-      <button>PLB</button>
-      <button>AWS</button>
-      <button>GRL</button>
-      <button>SVN</button>
-      <button>BLI</button>
+        <div class="row">
+            <div class="col-sm-4">
+      <button type="button" class="btn btn-outline-danger btn-lg">SCS</button>
+            </div>
+            
+            <div class="col-sm-4">
+      <button type="button" class="btn btn-secondary btn-lg">PLB</button>
+            </div>
+            
+            <div class="col-sm-4">
+      <button type="button" class="btn btn-secondary btn-lg">AWS</button>
+            </div>
+        
     </div>
- 
+        
+        <div class="row">
+        
+            <div class="col-sm-4">
+      <button type="button" class="btn btn-secondary btn-lg">GRL</button>
+            </div>
+            
+            <div class="col-sm-4">
+      <button type="button" class="btn btn-secondary btn-lg">SVN</button>
+            </div>
+            
+            <div class="col-sm-4">
+      <button type="button" class="btn btn-secondary btn-lg">BLI</button>
+            </div>
+            
+        </div>
+    </div>
+      
+      
+ <div id="contact-signup">
+      <div class="container">
+      
+    <h1>Stay Connected</h1>      
 
     <%= form_for :contact do |e| %>
 
-<!--      <p>-->
+      <p>
     <%= e.label :first_name %>
-    <%= e.text_field :first_name %>
-<!--      </p>-->
-      
-<!--      <p>-->
+    <%= e.text_field :first_name , placeholder:"First Name" %>
+          </p>
+    
+          <p>
   <%= e.label :last_name %>
-    <%= e.text_field :last_name %>
-<!--      </p>-->
+    <%= e.text_field :last_name , placeholder:"Last Name"%>
+      </p>
       
-<!--      <p>-->
+      <p>
   <%= e.label :email %>
-    <%= e.text_field :email %>
-<!--      </p>-->
+    <%= e.text_field :email , placeholder:"Email"%>
+      </p>
       
-<!--      <p>-->
+      <p>
     <%= e.submit %>
-<!--      </p>-->
+      </p>
       
     <% end %>
+    
+          </div>
+</div>
 
       
        </body>

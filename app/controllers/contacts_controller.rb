@@ -7,7 +7,7 @@ class Contacts < ApplicationController
     def create
       @contact = Contact.new(contact_params)
       @contact.save
-     redirect_to root_path
+      redirect_to root_path
     end
     
     

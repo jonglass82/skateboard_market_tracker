@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_16_135207) do
+ActiveRecord::Schema.define(version: 2018_08_29_232934) do
+
+  create_table "articles", force: :cascade do |t|
+    t.text "title"
+    t.string "body"
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.text "first_name"
@@ -22,6 +27,12 @@ ActiveRecord::Schema.define(version: 2018_08_16_135207) do
     t.text "first_name"
     t.text "last_name"
     t.text "email"
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.text "item_name"
+    t.string "description"
+    t.text "price"
   end
 
   create_table "sales", force: :cascade do |t|

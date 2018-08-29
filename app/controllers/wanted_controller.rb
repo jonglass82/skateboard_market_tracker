@@ -1,4 +1,4 @@
-class WantedController < ApplicationController
+class WantedItems < ApplicationController
     
 
     

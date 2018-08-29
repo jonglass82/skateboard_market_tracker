@@ -64,3 +64,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "chartkick"
 
 gem 'groupdate'
+
+gem 'rest-client'
