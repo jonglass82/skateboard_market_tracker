@@ -1,0 +1,29 @@
+<h3>Make a new listing here</h3>
+
+    <%= form_for :listing do |e| %>
+
+      <p>
+    <%= e.label :item_name %>
+    <%= e.text_field :item_name , placeholder:"Item Name" %>
+          </p>
+    
+          <p>
+  <%= e.label :description %>
+    <%= e.text_field :description , placeholder:"Describe Your Item Here"%>
+      </p>
+
+        <p>
+  <%= e.label :price %>
+    <%= e.text_field :price , placeholder:"Price"%>
+      </p>
+      
+      <p>
+    <%= e.submit %>
+      </p>
+      
+    <% end %>
+<!--
+
+        t.text :item_name
+        t.string :description
+        t.text :price-->

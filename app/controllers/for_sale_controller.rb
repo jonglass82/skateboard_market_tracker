@@ -1,4 +1,4 @@
-class ForSaleItems < ApplicationController
+class ForSaleController < ApplicationController
     
 def new
     @listing = Listing.new

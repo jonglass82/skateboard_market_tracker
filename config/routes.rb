@@ -13,8 +13,14 @@ Rails.application.routes.draw do
     
     get 'welcome/wanted', to: 'welcome#wanted'
     
+    get 'welcome/new_listing', to: 'welcome#new_listing'
+    
     root 'welcome#main'
     
     resources :contacts
+    
+    resources :articles
+    
+    resources :listings
 
 end
