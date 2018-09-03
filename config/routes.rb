@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     
     get 'welcome/new_listing', to: 'welcome#new_listing'
     
+    get 'welcome/main', to:'welcome#news'
+    
     root 'welcome#main'
     
     resources :contacts
