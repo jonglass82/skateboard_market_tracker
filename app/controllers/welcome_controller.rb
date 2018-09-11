@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
         
     end
     
-    def index
+    def for_sale
        @listings = Listing.all 
     end
     

@@ -55,7 +55,11 @@
 
 <h1>Current Inventory:</h1>
     
-
+<%= @listings.each do |item| %>
+   
+     <%= item.item_name %>
+    
+  <% end %>
     
 
 <a href="wanted">Go to wanted page</a>
