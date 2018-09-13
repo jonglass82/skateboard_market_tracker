@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     
     get 'welcome/new_article', to: 'welcome#new_article'
     
+    get 'welcome/news', to: 'welcome#index'
+    
     get 'welcome/for_sale', to: 'welcome#for_sale'
     
     get 'welcome/for_sale', to: 'for_sale#show'
@@ -21,6 +23,8 @@ Rails.application.routes.draw do
     post 'welcome/main', to: 'welcome#create'
     
     post 'welcome/new_listing', to: 'for_sale#create'
+    
+    post 'welcome/new_article', to: 'news#create'
     
     get 'welcome/new_listing', to: 'welcome#new_listing'
     

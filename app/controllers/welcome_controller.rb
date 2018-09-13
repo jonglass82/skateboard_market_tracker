@@ -5,6 +5,10 @@ class WelcomeController < ApplicationController
         
     end
     
+    def news
+        @articles = Article.all
+    end
+    
     def for_sale
        @listings = Listing.all 
     end

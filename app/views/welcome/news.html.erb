@@ -55,6 +55,15 @@
 
 <h1>This is the NEWS page</h1>
     
+    
+<%= @articles.each do |post| %>
+    
+    <%= post.title %>
+    <%= post.body %>
+    
+<% end %>
+    
+    
 <a href="new_article">Create a new article</a>
     
 </body>
