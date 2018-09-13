@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     
     get 'welcome/news', to: 'welcome#news'
     
+    get 'welcome/new_article', to: 'welcome#new_article'
+    
     get 'welcome/for_sale', to: 'welcome#for_sale'
     
     get 'welcome/for_sale', to: 'for_sale#show'
@@ -24,7 +26,7 @@ Rails.application.routes.draw do
     
     resources :contacts
     
-    resources :articles
+#    resources :articles
     
     resources :listings
 
