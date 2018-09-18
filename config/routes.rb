@@ -28,6 +28,8 @@ Rails.application.routes.draw do
     
     get 'welcome/new_listing', to: 'welcome#new_listing'
     
+    get 'welcome/new_wanted', to: 'welcome#new_wanted'
+    
     resources :contacts
     
 #    resources :articles

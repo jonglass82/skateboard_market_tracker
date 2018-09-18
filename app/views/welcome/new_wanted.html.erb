@@ -1,0 +1,11 @@
+<h1>Create a new wanted listing</h1>
+
+<%= form_for :wanted do |w| %>
+
+<%= w.label :wanted %>
+
+<%= w.text_field :wanted , placeholder:"Enter a description here" %><br>
+
+<%= w.submit %>
+
+<% end %> 
