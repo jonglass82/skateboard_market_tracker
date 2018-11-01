@@ -4,31 +4,31 @@ Rails.application.routes.draw do
       
     root 'welcome#main'
     
-    get 'welcome/main', to: 'welcome#main'
+    get '/main', to: 'welcome#main'
     
-    get 'welcome/news', to: 'welcome#news'
+    get '/news', to: 'welcome#news'
     
-    get 'welcome/new_article', to: 'welcome#new_article'
+    get '/new_article', to: 'welcome#new_article'
     
-    get 'welcome/news', to: 'welcome#index'
+    get '/news', to: 'welcome#index'
     
-    get 'welcome/for_sale', to: 'welcome#for_sale'
+    get '/for_sale', to: 'welcome#for_sale'
     
-    get 'welcome/for_sale', to: 'for_sale#show'
+    get '/for_sale', to: 'for_sale#show'
     
-    get 'welcome/for_sale', to: 'welcome#index'
+    get '/for_sale', to: 'welcome#index'
     
-    get 'welcome/wanted', to: 'welcome#wanted'
+    get '/wanted', to: 'welcome#wanted'
     
-    post 'welcome/main', to: 'welcome#create'
+    post '/main', to: 'welcome#create'
     
-    post 'welcome/new_listing', to: 'for_sale#create'
+    post '/new_listing', to: 'for_sale#create'
     
-    post 'welcome/new_article', to: 'news#create'
+    post '/new_article', to: 'news#create'
     
-    get 'welcome/new_listing', to: 'welcome#new_listing'
+    get '/new_listing', to: 'welcome#new_listing'
     
-    get 'welcome/new_wanted', to: 'welcome#new_wanted'
+    get '/new_wanted', to: 'welcome#new_wanted'
     
     resources :contacts
     
