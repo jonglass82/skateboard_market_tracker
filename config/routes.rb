@@ -26,6 +26,8 @@ Rails.application.routes.draw do
     
     post '/new_article', to: 'news#create'
     
+    post '/new_wanted', to: 'wanted#create'
+    
     get '/new_listing', to: 'welcome#new_listing'
     
     get '/new_wanted', to: 'welcome#new_wanted'
