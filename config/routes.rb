@@ -34,7 +34,9 @@ Rails.application.routes.draw do
     
     resources :contacts
     
-#    resources :articles
+    resources :articles
+    
+    resources :sales
     
     resources :listings
 
