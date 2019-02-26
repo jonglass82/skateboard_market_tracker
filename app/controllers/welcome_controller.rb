@@ -1,18 +1,14 @@
 class WelcomeController < ApplicationController
     
     
-#    def main
-#        @sales = Sale.all
-#
-#        respond_to do |format|
-#            format.html
-#        end
-#    end
+    def main
 
-    def for_sale
-    @listings = Listing.all
+      @sales = Sale.all
+      @listings = Listing.all
+      @last_four_listings = Listing.last(4)
+      
     end
-    
+
 
     def new
       @contact = contact.new

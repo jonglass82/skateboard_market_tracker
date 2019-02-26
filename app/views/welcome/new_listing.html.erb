@@ -58,6 +58,8 @@
     <div class="container">
 
 <h3>Create a new listing here</h3>
+        
+        <%= line_chart Sale.group_by_day(:created_at).count %>
     
 
 

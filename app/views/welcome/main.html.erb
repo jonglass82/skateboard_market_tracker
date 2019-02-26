@@ -5,13 +5,10 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
       
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-      
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
       
-    
-         
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+              
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       
@@ -55,43 +52,32 @@
 
   <body>
       
-   <h1>Skateboard Market Tracker</h1>
+   <h1>Sk8er Tr8der</h1>
       
-     <%= line_chart Sale.group_by_day(:created_at).count %>
+
+<div class="container">     
+     
+     
+<h1>Recently Listed:</h1>
+
+<% @last_four_listings.each do |l| %>
+
+<div id="row">
+    <div class="col-sm-3">
+
+<%= l.item_name =%> <br>
+<%= l.description =%> <br>
+<%= l.price =%>
+
+</div>
+</div>
+
+<% end %>
+
 
       
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-      <button type="button" class="btn btn-outline-danger btn-lg">SCS</button>
-            </div>
-            
-            <div class="col-sm-4">
-      <button type="button" class="btn btn-secondary btn-lg">PLB</button>
-            </div>
-            
-            <div class="col-sm-4">
-      <button type="button" class="btn btn-secondary btn-lg">AWS</button>
-            </div>
-        
-    </div>
-        
-        <div class="row">
-        
-            <div class="col-sm-4">
-      <button type="button" class="btn btn-secondary btn-lg">GRL</button>
-            </div>
-            
-            <div class="col-sm-4">
-      <button type="button" class="btn btn-secondary btn-lg">SVN</button>
-            </div>
-            
-            <div class="col-sm-4">
-      <button type="button" class="btn btn-secondary btn-lg">BLI</button>
-            </div>
-            
-        </div>
-    </div>
+
+</div>
       
       
  <div id="contact-signup">
@@ -123,10 +109,13 @@
     <% end %>
     
           </div>
+                    
 </div>
+
 
       
        </body>
+
     
 </html>
 
