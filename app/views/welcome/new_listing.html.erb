@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
       
 
@@ -44,7 +44,7 @@
     </ul>
     
     </div>
-    </div>
+  </div>
       
 </nav>
 
@@ -57,12 +57,8 @@
     
     <div class="container">
 
-<h3>Create a new listing here</h3>
+<h3>Create a new listing: </h3>
         
-        <%= line_chart Sale.group_by_day(:created_at).count %>
-    
-
-
     <%= form_for :listing do |e| %>
 
       <p>
@@ -79,6 +75,16 @@
   <%= e.label :price %>
     <%= e.text_field :price , placeholder:"Price"%>
       </p>
+
+              <p>
+  <%= e.label :user_id %>
+    <%= e.text_field :user_id , placeholder:"User"%>
+      </p>
+
+              <p>
+  <%= e.label :image_url %>
+    <%= e.text_field :image_url , placeholder:"Image"%>
+      </p>
       
       <p>
     <%= e.submit %>
@@ -87,7 +93,8 @@
     <% end %>
     
     </div>
-    </div>
+
+  </div>
 
 </body>
     

@@ -5,16 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'csv'
 
-namespace :import do
-    
-    desc "import eBay sales"
-    task sales: :environment do
-        
-        sales = File.join Rails.root, 'data.csv'
-        CSV.foreach(sales)
-        
-    end
-    
-end
+
+# listing = Listing.create(item_name: "Rodney Mullen Plan B", description: "lightly used" ,price: "$600", user_id: 1 , image_url: "www.img.com")
