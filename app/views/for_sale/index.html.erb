@@ -53,7 +53,21 @@
 
 <body>
 
-<h1>Current Inventory:</h1> 
+    <h1>Current Inventory:</h1> 
+
+
+
+    <% @listings.each do |listing| %>
+
+        <div class="container">
+
+            <%= listing.item_name %>
+            <%= listing.price %>
+            <%= listing.description %>
+
+        </div>
+
+    <% end %>
     
     
 <button><a href="new_listing">Create a new listing</a></button>

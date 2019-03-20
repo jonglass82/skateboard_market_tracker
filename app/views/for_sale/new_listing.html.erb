@@ -48,8 +48,8 @@
       
 </nav>
 
-    
 </header>
+
 
 <body>
     
@@ -57,40 +57,19 @@
     
     <div class="container">
 
-<h3>Create a new listing: </h3>
+  <h3>Create a new listing: </h3>
+
+<form action="/new_listing/create" method="post">
+
+  <h4>Item name:</h4><input type="item_name" name="item_name"><br>
+  <h4>Description:</h4><input type="description" name="description"><br>
+
+  <h4>Price:</h4><input type="price" name="price"><br>
+
+  <input type="submit" name="" value="Create listing"/>
+
+</form>
         
-    <%= form_for :listing do |e| %>
-
-      <p>
-    <%= e.label :item_name %>
-    <%= e.text_field :item_name , placeholder:"Item Name" %>
-          </p>
-    
-      <p>
-  <%= e.label :description %>
-    <%= e.text_field :description , placeholder:"Describe Your Item Here"%>
-      </p>
-
-        <p>
-  <%= e.label :price %>
-    <%= e.text_field :price , placeholder:"Price"%>
-      </p>
-
-              <p>
-  <%= e.label :user_id %>
-    <%= e.text_field :user_id , placeholder:"User"%>
-      </p>
-
-              <p>
-  <%= e.label :image_url %>
-    <%= e.text_field :image_url , placeholder:"Image"%>
-      </p>
-      
-      <p>
-    <%= e.submit %>
-      </p>
-      
-    <% end %>
     
     </div>
 
