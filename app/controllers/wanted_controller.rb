@@ -2,11 +2,11 @@ class WantedController < ApplicationController
     
     def index
         @wanteds = Wanted.all
-        render "welcome/wanted.html.erb"
+        render "wanted/wanted.html.erb"
     end
 
     def new_wanted
-        render "welcome/new_wanted.html.erb"
+        render "wanted/new_wanted.html.erb"
     end
         
         
@@ -18,7 +18,12 @@ class WantedController < ApplicationController
             user_id: params["user_id"], 
             image_url: params["image_url"])
         
-          render "welcome/wanted_confirmation.html.erb"
+          render "wanted/wanted_confirmation.html.erb"
+    end
+
+    def show
+        @wanted = Wanted.find_by_id(params["id"])
+        render "wanted/show.html.erb"
     end
   
 

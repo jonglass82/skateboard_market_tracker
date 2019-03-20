@@ -31,7 +31,9 @@ Rails.application.routes.draw do
 
     get "/wanted" => "wanted#index"
 
+    get "/wanted/show/:id" => "wanted#show"
+
     post "/new_wanted/create" => "wanted#create"
-    
+  
 
 end
