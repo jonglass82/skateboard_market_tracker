@@ -1,43 +1,37 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     
-      
-    root 'welcome#main'
+    root "welcome#main"
     
-    get '/main', to: 'welcome#main'
+    get "/main" => "welcome#main"
     
-    get '/news', to: 'welcome#news'
+    get "/news" => "welcome#news"
     
-    get '/new_article', to: 'welcome#new_article'
+    get "/new_article" => "welcome#new_article"
     
-    get '/news', to: 'welcome#index'
+    get "/news" => "welcome#index"
+
+    post "/main" => "welcome#create"
+
+    post "/new_article" => "news#create"
+
     
-    get '/for_sale', to: 'welcome#for_sale'
+    get "/for_sale" => "welcome#for_sale"
     
-    get '/for_sale', to: 'for_sale#show'
+    get "/for_sale" => "for_sale#show"
     
-    get '/for_sale', to: 'welcome#index'
+    get "/for_sale" => "welcome#index"
+
+    get "/new_listing" => "for_sale#index"
+
+    post "/new_listing" => "for_sale#create"
     
-    get '/wanted', to: 'welcome#wanted'
     
-    post '/main', to: 'welcome#create'
+    get "/new_wanted" => "wanted#new_wanted"
+
+    get "/wanted" => "wanted#index"
+
+    post "/new_wanted/create" => "wanted#create"
     
-    post '/new_listing', to: 'for_sale#create'
-    
-    post '/new_article', to: 'news#create'
-    
-    post '/new_wanted', to: 'wanted#create'
-    
-    get '/new_listing', to: 'welcome#new_listing'
-    
-    get '/new_wanted', to: 'welcome#new_wanted'
-    
-    resources :contacts
-    
-    resources :articles
-    
-    resources :sales
-    
-    resources :listings
 
 end

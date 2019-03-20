@@ -10,8 +10,9 @@ class WelcomeController < ApplicationController
     end
 
 
-    def new
-      @contact = contact.new
+    def create
+
+      
     end
 
 

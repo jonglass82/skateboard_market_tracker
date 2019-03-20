@@ -1,16 +1,15 @@
 <h1>Create a new wanted listing</h1>
 
-<%= form_for :wanted do |w| %>
 
-<%= w.label :wanted %>
+<form action="/new_wanted/create" method="post">
 
-<%= w.text_field :title , placeholder:"Enter a description here" %><br>
+<h4>Title:</h4><input type="title" name="title"><br>
+<h4>Initial Offer:</h4><input type="initial_offer" name="initial_offer"><br>
 
+<input type="submit" name="" value="Create Wanted"/>
 
-<%= w.label :offer_amount %>
+</form>
+      
+    
+    
 
-<%= w.text_field :initial_offer , placeholder:"Enter an initial offer amount" %><br>
-
-<%= w.submit %>
-
-<% end %> 

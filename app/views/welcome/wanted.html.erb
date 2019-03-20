@@ -57,6 +57,15 @@
     
     
 <a href="new_wanted">Create a new wanted Listing</a>
+
+
+    <% @wanteds.each do |w| %>
+
+    <div class="container">
+        <%= w.title %>
+    </div>
+
+    <% end %>
     
 </body>
     
