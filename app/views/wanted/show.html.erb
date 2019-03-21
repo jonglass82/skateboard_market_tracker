@@ -1,3 +1,5 @@
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 <h1>Wanted Listing:</h1>
 
 <%= @wanted.title %>
@@ -6,6 +8,10 @@
 
 <br>
 <br>
+
+<a href="/wanted/<%= @wanted.id %>/edit">EDIT</a>
+
+<a href="/wanted/<%= @wanted.id %>" data-method="delete" rel="nofollow">DELETE</a>
 
 
 <a href="/wanted">Back to wanted listings</a>

@@ -1,0 +1,12 @@
+<h1>Edit your wanted listing</h1>
+
+<form action="/wanted/<%= @wanted.id %>" method="post">
+
+      <input type="hidden" name="_method" value="patch">
+
+    <h4>Title:</h4><input type="title" name="title" value="<%= @wanted.title %>"><br>
+    <h4>Initial Offer:</h4><input type="initial_offer" name="initial_offer" value="<%= @wanted.initial_offer %>"><br>
+
+    <input type="submit" name="" value="Update"/>
+
+</form>

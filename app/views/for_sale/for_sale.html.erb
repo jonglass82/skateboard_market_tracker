@@ -1,7 +1,6 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>SkateboardMarketTracker</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -20,14 +19,14 @@
     <div class="container-fluid">
         
         <div class="navbar-header">
-            <a href="#" class="navbar-brand"><b>Skateboard Market Tracker</b></a>
+            <a href="main" class="navbar-brand"><b>Skateboard Market Tracker</b></a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dropdown">
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
             </button>
                  
-</div>
+        </div>
 
         
 <div id="dropdown" class="collapse navbar-collapse">
@@ -51,24 +50,21 @@
     
 </header>
 
+
 <body>
 
-<h1>This is the WANTED page</h1>
+<h1>Current Inventory:</h1> 
     
     
-<a href="wanted/new">Create a new wanted Listing</a>
-
-
-    <% @wanteds.each do |w| %>
-
-    <div class="container">
-        <%= w.title %>
-        <%= w.initial_offer %>
-        <a href="wanted/<%= w.id %>" %> View </a>
-    </div>
-
-    <% end %>
+<button><a href="new_listing">Create a new listing</a></button>
     
+    
+      
 </body>
     
 </html>
+
+
+
+
+

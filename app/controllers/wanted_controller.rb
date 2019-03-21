@@ -25,6 +25,30 @@ class WantedController < ApplicationController
         @wanted = Wanted.find_by_id(params["id"])
         render "wanted/show.html.erb"
     end
+
+    def edit
+        @wanted = Wanted.find_by_id(params["id"])
+        render "edit.html.erb"
+    end
+
+
+    def update
+        @wanted = Wanted.find_by_id(params["id"])
+        @wanted.title = params["title"]
+        @wanted.initial_offer = params["initial_offer"]
+        @wanted.save
+
+        render "wanted_update_confirmation.html.erb"
+
+    end
+
+
+    def destroy
+        @wanted = Wanted.find_by_id(params["id"])
+        @wanted.destroy
+
+        render "wanted_destroy_confirmation.html.erb"
+    end
   
 
 end

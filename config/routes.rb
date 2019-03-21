@@ -25,13 +25,19 @@ Rails.application.routes.draw do
     post "/new_listing/create" => "for_sale#create"
     
     
-    get "/new_wanted" => "wanted#new_wanted"
-
     get "/wanted" => "wanted#index"
 
-    get "/wanted/show/:id" => "wanted#show"
+    get "/wanted/new" => "wanted#new_wanted"
 
-    post "/new_wanted/create" => "wanted#create"
+    post "/wanted" => "wanted#create"
+
+    get "/wanted/:id" => "wanted#show"
+
+    get "/wanted/:id/edit" => "wanted#edit"
+
+    patch "/wanted/:id" => "wanted#update"
+
+    delete "/wanted/:id" => "wanted#destroy"
   
 
 end
