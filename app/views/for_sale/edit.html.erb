@@ -1,0 +1,15 @@
+<h1>Edit your listing</h1>
+
+<form action="/for_sale/<%= @listing.id %>" method="post">
+
+      <input type="hidden" name="_method" value="patch">
+
+    <h4>Item Name:</h4><input type="item_name" name="item_name" value="<%= @listing.item_name %>"><br>
+
+    <h4>Description:</h4><input type="description" name="description" value="<%= @listing.description %>"><br>
+
+      <h4>Price:</h4><input type="price" name="price" value="<%= @listing.price %>"><br>
+
+    <input type="submit" name="" value="Update"/>
+
+</form>

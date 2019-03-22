@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-#contact-signup{
+footer{
     background-color: lightgray;
     height: 300px;
 }

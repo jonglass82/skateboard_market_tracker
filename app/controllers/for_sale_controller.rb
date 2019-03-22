@@ -22,6 +22,37 @@ def create
   
     render "for_sale/for_sale_confirmation.html.erb"
 end
+
+
+    def show
+        @listing = Listing.find_by_id(params["id"])
+        render "for_sale/show.html.erb"
+    end
+
+    def edit
+        @listing = Listing.find_by_id(params["id"])
+        render "for_sale/edit.html.erb"
+    end
+
+
+    def update
+        @listing = Listing.find_by_id(params["id"])
+        @listing.item_name = params["item_name"]
+        @listing.price = params["price"]
+        @listing.description = params["description"]
+        @listing.save
+
+        render "listing_update_confirmation.html.erb"
+
+    end
+
+
+    # def destroy
+    #     @wanted = Wanted.find_by_id(params["id"])
+    #     @wanted.destroy
+
+    #     render "wanted_destroy_confirmation.html.erb"
+    # end
     
     
 end

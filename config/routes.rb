@@ -15,15 +15,21 @@ Rails.application.routes.draw do
 
     post "/new_article" => "news#create"
 
+    #for sale listing routes
     
     get "/for_sale" => "for_sale#index"
-    
-    get "/for_sale" => "for_sale#show"
 
     get "/new_listing" => "for_sale#new"
 
     post "/new_listing/create" => "for_sale#create"
     
+    get "/for_sale/:id" => "for_sale#show"
+
+    get "/for_sale/:id/edit" => "for_sale#edit"
+
+    patch "/for_sale/:id" => "for_sale#update"
+
+    #wanted listing routes
     
     get "/wanted" => "wanted#index"
 

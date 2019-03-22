@@ -1,0 +1,12 @@
+<h1>Show listing</h1>
+
+<%= @listing.item_name %>
+<%= @listing.description %>
+<%= @listing.price %>
+
+<a href="/for_sale">Back to listings</a>
+
+<br>
+
+<a href="/for_sale/<%= @listing.id %>/edit">EDIT</a>
+

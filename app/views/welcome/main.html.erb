@@ -58,16 +58,18 @@
 <div class="container">     
      
      
-<h1>Recently Listed:</h1>
+<h1>Recently Listed For Sale:</h1>
 
-<% @last_four_listings.each do |l| %>
+<% @last_four_listings.each do |listing| %>
 
 <div id="row">
     <div class="col-sm-3">
 
-<%= l.item_name =%> <br>
-<%= l.description =%> <br>
-<%= l.price =%>
+<%= listing.item_name =%> <br>
+<%= listing.description =%> <br>
+<%= listing.price =%>
+
+<a href="/for_sale/<%= listing.id %>">View Listing</a>
 
 </div>
 </div>
@@ -80,41 +82,14 @@
 </div>
       
       
- <div id="contact-signup">
-      <div class="container">
-      
-    <h1>Stay Connected</h1>      
-
-    <%= form_for :contact do |e| %>
-
-      <p>
-    <%= e.label :first_name %>
-    <%= e.text_field :first_name , placeholder:"First Name" %>
-          </p>
-    
-          <p>
-  <%= e.label :last_name %>
-    <%= e.text_field :last_name , placeholder:"Last Name"%>
-      </p>
-      
-      <p>
-  <%= e.label :email %>
-    <%= e.text_field :email , placeholder:"Email"%>
-      </p>
-      
-      <p>
-    <%= e.submit %>
-      </p>
-      
-    <% end %>
-    
-          </div>
-                    
-</div>
+     <footer id="contact-signup">
+         
+                        
+    </footer>
 
 
       
-       </body>
+</body>
 
     
 </html>
