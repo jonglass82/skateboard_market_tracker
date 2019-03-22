@@ -57,25 +57,42 @@
 
 <div class="container">     
      
-     
-<h1>Recently Listed For Sale:</h1>
+       
+  <h1>Recently Listed For Sale:</h1>
 
-<% @last_four_listings.each do |listing| %>
+        <% @last_four_listings.each do |listing| %>
+
+        <div id="row">
+            <div class="col-sm-3">
+
+        <%= listing.item_name =%> <br>
+        <%= listing.description =%> <br>
+        <%= listing.price =%>
+
+        <a href="/for_sale/<%= listing.id %>">View</a>
+
+        </div>
+        </div>
+
+  <% end %>
+
+
+<h1>Recently Wanted:</h1>
+
+<% @last_four_wanteds.each do |wanted| %>
 
 <div id="row">
     <div class="col-sm-3">
 
-<%= listing.item_name =%> <br>
-<%= listing.description =%> <br>
-<%= listing.price =%>
+<%= wanted.title =%> <br>
+<%= wanted.initial_offer =%>
 
-<a href="/for_sale/<%= listing.id %>">View Listing</a>
+<a href="/wanted/<%= wanted.id %>">View</a>
 
 </div>
 </div>
 
 <% end %>
-
 
       
 
