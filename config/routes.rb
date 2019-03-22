@@ -29,6 +29,8 @@ Rails.application.routes.draw do
 
     patch "/for_sale/:id" => "for_sale#update"
 
+    delete "/for_sale/:id" => "for_sale#destroy"
+
     #wanted listing routes
     
     get "/wanted" => "wanted#index"

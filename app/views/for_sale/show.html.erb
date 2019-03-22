@@ -1,3 +1,5 @@
+   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 <h1>Show listing</h1>
 
 <%= @listing.item_name %>
@@ -5,6 +7,10 @@
 <%= @listing.price %>
 
 <a href="/for_sale">Back to listings</a>
+
+<br>
+
+<a href="/for_sale/<%= @listing.id %>" data-method="delete" rel="nofollow">DELETE</a>
 
 <br>
 
