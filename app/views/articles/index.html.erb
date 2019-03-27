@@ -1,0 +1,23 @@
+<h1>This is the blog page</h1>
+
+<a href="/new_article">Create a new blog post</a>
+
+<div class="main_content">
+
+  <a href="/main">Back to main page</a>
+
+<% @articles.each do |article|%>
+
+<div class="container">
+
+  <h1><%= article.title %></h1>
+  <p><%= article.body %></p>
+
+  <a href="article/<%= article.id %>" %> View </a>
+
+</div>
+
+<% end %>
+
+
+</div>

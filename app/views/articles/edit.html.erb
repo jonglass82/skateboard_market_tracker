@@ -1,0 +1,15 @@
+<h1>Edit your wanted listing</h1>
+
+<form action="/article/<%= @article.id %>" method="post">
+
+      <input type="hidden" name="_method" value="patch">
+
+    <h4>Title:</h4><input type="title" name="title" value="<%= @article.title %>"><br>
+    <h4>Body:</h4><input type="body" name="body" value="<%= @article.body %>"><br>
+
+    <input type="submit" name="" value="Update"/>
+
+</form>
+
+
+<a href="/new_article">Create a new blog post</a>

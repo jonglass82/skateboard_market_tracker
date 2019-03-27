@@ -1,15 +1,20 @@
 <h1>Create a new wanted listing</h1>
 
+   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 <form action="/wanted" method="post">
 
 <h4>Title:</h4><input type="title" name="title"><br>
 <h4>Initial Offer:</h4><input type="initial_offer" name="initial_offer"><br>
 
+
+
+
 <input type="submit" name="" value="Create Wanted"/>
 
 </form>
       
     
-    
+ <%= form.label :image %>
+  <%= form.file_field :image %> 
 

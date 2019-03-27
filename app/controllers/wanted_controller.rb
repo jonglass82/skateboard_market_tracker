@@ -11,6 +11,7 @@ class WantedController < ApplicationController
         
         
     def create
+        @image = params["image"]
       
           @wanted = Wanted.create(
             title: params["title"], 

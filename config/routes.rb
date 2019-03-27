@@ -4,16 +4,22 @@ Rails.application.routes.draw do
     root "welcome#main"
     
     get "/main" => "welcome#main"
-    
-    get "/news" => "welcome#news"
-    
-    get "/new_article" => "welcome#new_article"
-    
-    get "/news" => "welcome#index"
 
-    post "/main" => "welcome#create"
+    #article and news routes for blog
+    
+    get "/articles" => "articles#index"
+    
+    get "/new_article" => "articles#new"
 
-    post "/new_article" => "news#create"
+    post "/article/create" => "articles#create"
+
+    get "/article/:id" => "articles#show"
+
+    get "/article/:id/edit" => "articles#edit"
+
+    patch "/article/:id" => "articles#update"
+
+    delete "/article/:id" => "articles#destroy"
 
     #for sale listing routes
     

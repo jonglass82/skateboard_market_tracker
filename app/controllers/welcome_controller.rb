@@ -5,8 +5,10 @@ class WelcomeController < ApplicationController
 
       @sales = Sale.all
       @listings = Listing.all
+      @articles = Article.all
       @last_four_listings = Listing.last(4)
       @last_four_wanteds = Wanted.last(4)
+      @top_article = Article.last.title
       
     end
 

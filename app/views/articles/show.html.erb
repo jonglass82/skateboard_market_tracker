@@ -1,0 +1,20 @@
+   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<h1>Here is your article</h1>
+
+<%= @article.title %>
+<%= @article.body %>
+
+<a href="/articles">Back to blog</a>
+
+<br>
+
+<a href="/article/<%= @article.id %>/edit">EDIT</a>
+
+<br>
+
+<a href="/article/<%= @article.id %>" data-method="delete" rel="nofollow">DELETE</a>
+
+<br>
+
+<a href="/new_article">Create a new blog post</a>
