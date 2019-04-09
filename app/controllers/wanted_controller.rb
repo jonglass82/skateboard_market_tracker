@@ -11,15 +11,15 @@ class WantedController < ApplicationController
         
         
     def create
-        @image = params["image"]
-      
+
           @wanted = Wanted.create(
             title: params["title"], 
             initial_offer: params["initial_offer"], 
             user_id: params["user_id"], 
-            image_url: params["image_url"])
+            image: params["image"])
         
           render "wanted/wanted_confirmation.html.erb"
+
     end
 
     def show

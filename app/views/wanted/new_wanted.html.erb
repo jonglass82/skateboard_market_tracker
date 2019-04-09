@@ -2,19 +2,18 @@
 
    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-<form action="/wanted" method="post">
+<form action="/wanted" method="post" enctype="multipart/form-data">
 
-<h4>Title:</h4><input type="title" name="title"><br>
-<h4>Initial Offer:</h4><input type="initial_offer" name="initial_offer"><br>
+Title:<input type="text" name="title" value="">
+Initial offer:<input type="text" name="initial_offer" value="">
+<p><input type="file" name="image">
+<p><input type="file" name="image">
+<p><input type="file" name="image">
 
-
-
-
-<input type="submit" name="" value="Create Wanted"/>
+<p><button type="submit">Submit</button>
 
 </form>
+
       
-    
- <%= form.label :image %>
-  <%= form.file_field :image %> 
+  
 

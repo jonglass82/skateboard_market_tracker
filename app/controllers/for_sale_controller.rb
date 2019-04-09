@@ -11,14 +11,13 @@ class ForSaleController < ApplicationController
     
     
     def create
-        
-        @item_name = params["item_name"]
-        @description = params["description"]
-        @price = params["price"]
-        @user_id = params["user_id"]
-        @image_url = params["image_url"]
 
-        @listing = Listing.create(item_name: @item_name, description: @description, price: @price, user_id: @user_id, image_url: @image_url)
+        @listing = Listing.create(
+            item_name: params["item_name"], 
+            description: params["description"], 
+            price: params["price"], 
+            user_id: params["user_id"], 
+            image: params["image"])
       
         render "for_sale/for_sale_confirmation.html.erb"
     end

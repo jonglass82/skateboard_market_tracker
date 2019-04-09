@@ -1,10 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>SkateboardMarketTracker</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      
 
-<h1>Wanted Listing:</h1>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      
+</head>
+    
+<header>
 
-<%= @wanted.title %>
+    <nav class="navbar navbar-light">
+    <div class="container-fluid">
+        
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"><b>Skateboard Market Tracker</b></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dropdown">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+            </button>
+                 
+</div>
 
-<%= @wanted.initial_offer %> <br>
+        
+<div id="dropdown" class="collapse navbar-collapse">
+            
+    <ul class="nav navbar-nav">
+        <li><a href="main">Home</a></li>
+        <li><a href="articles">Blog</a></li>
+        <li><a href="for_sale">For Sale</a></li>
+        <li><a href="wanted">Wanted</a></li>
+    </ul>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Follow Us On INSTAGRAM <i class="fa fa-instagram"></i></a></li>
+    </ul>
+    
+    </div>
+    </div>
+      
+</nav>
+
+    
+</header>
+
+<body>    
+
+
+    <h1>Wanted Listing:</h1>
+
+        <% if @wanted.image.attached? %>
+
+            <%= image_tag(@wanted.image, height:320, width:200) %>
+
+        <% end %>
+
+        <%= @wanted.title %>
+
+        <%= @wanted.initial_offer %> <br>
+
+
+<br>
 
 <br>
 <br>
@@ -17,5 +80,7 @@
 <a href="/wanted">Back to wanted listings</a>
 
 
+</body>
 
+</html>
 

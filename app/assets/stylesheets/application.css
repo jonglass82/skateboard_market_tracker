@@ -18,7 +18,11 @@ footer{
 }
 
 .main_content{
-  align-content: center;
-  text-align: center;
   padding: 20px;
 }
+
+#image{
+  height: 10px;
+  width: 10px;
+}
+

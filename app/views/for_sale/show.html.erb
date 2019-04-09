@@ -2,6 +2,12 @@
 
 <h1>Show listing</h1>
 
+     <% if @listing.image.attached? %>
+
+            <%= image_tag(@listing.image, height:320, width:200) %>
+
+        <% end %>
+
 <%= @listing.item_name %>
 <%= @listing.description %>
 <%= @listing.price %>

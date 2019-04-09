@@ -72,6 +72,13 @@
         <div id="row">
             <div class="col-sm-3">
 
+        <% if listing.image.attached? %>
+
+        <%= image_tag(listing.image, height:320, width:200) %>
+
+        <% end %>
+
+
         <%= listing.item_name =%> <br>
         <%= listing.description =%> <br>
         <%= listing.price =%>
@@ -90,6 +97,12 @@
 
 <div id="row">
     <div class="col-sm-3">
+
+      <% if wanted.image.attached? %>
+
+        <%= image_tag(wanted.image, height:320, width:200) %>
+
+        <% end %>
 
 <%= wanted.title =%> <br>
 <%= wanted.initial_offer =%>

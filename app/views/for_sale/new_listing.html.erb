@@ -59,12 +59,16 @@
 
   <h3>Create a new listing: </h3>
 
-<form action="/new_listing/create" method="post">
+<form action="/new_listing/create" method="post" enctype="multipart/form-data">
 
   <h4>Item name:</h4><input type="item_name" name="item_name"><br>
   <h4>Description:</h4><input type="description" name="description"><br>
 
   <h4>Price:</h4><input type="price" name="price"><br>
+
+  <p><input type="file" name="image">
+  <p><input type="file" name="image">
+  <p><input type="file" name="image">
 
   <input type="submit" name="" value="Create listing"/>
 
@@ -78,3 +82,8 @@
 </body>
     
 </html>
+
+
+
+
+
