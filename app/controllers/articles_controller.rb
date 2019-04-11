@@ -11,7 +11,8 @@ class ArticlesController < ApplicationController
     def create
       @article = Article.create(
         title:params["title"],
-        body: params["body"])
+        body: params["body"],
+        image:params["image"])
 
       redirect_to "/articles"
     end

@@ -60,6 +60,9 @@
 
             <%= image_tag(@wanted.image, height:320, width:200) %>
 
+        <% else %>
+        <h3>No image attached </h3>
+
         <% end %>
 
         <%= @wanted.title %>

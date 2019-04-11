@@ -2,6 +2,13 @@
 
 <h1>Here is your article</h1>
 
+      <% if @article.image.attached? %>
+
+        <%= image_tag(@article.image, height:320, width:200) %>
+
+      <% end %>
+
+        
 <%= @article.title %>
 <%= @article.body %>
 

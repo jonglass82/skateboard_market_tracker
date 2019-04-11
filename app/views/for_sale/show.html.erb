@@ -4,9 +4,12 @@
 
      <% if @listing.image.attached? %>
 
-            <%= image_tag(@listing.image, height:320, width:200) %>
+            <%= image_tag(@listing.image) %>
+     <% else %>
 
-        <% end %>
+          <h2>No image to show</h2>
+
+     <% end %>
 
 <%= @listing.item_name %>
 <%= @listing.description %>

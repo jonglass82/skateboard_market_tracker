@@ -47,48 +47,72 @@
       
 </nav>
 
-    
 </header>
 
   <body>
       
    <h1>Sk8er Tr8der</h1>
 
-   <div class="jumbotron">
-  <h1 class="display-4"><%= @top_article %></h1>
-  <p class="lead">This is where the articles will go.</p>
-  <hr class="my-4">
-  <p>Lots of articles will go here.</p>
-</div>
+
+   <div class="jumbotron" style="">
+    <h1 class="display-4"> <%= @top_article %></h1>
+      <p class="lead"></p>
+  </div>
+
+
+  <div>
+    <p>Lots of articles will go here.</p>
+  </div>
       
 
-<div class="container">     
+<div class="container">   
+
+<div class="container">   
      
        
   <h2>Recently Listed For Sale:</h2>
 
-        <% @last_four_listings.each do |listing| %>
+    <% @last_four_listings.each do |listing| %>
+
+      <div class="container">
 
         <div id="row">
             <div class="col-sm-3">
 
         <% if listing.image.attached? %>
 
-        <%= image_tag(listing.image, height:320, width:200) %>
+        <div class="card" style="width: 18rem;">
+  <img class="img-thumbnail" src="<%= url_for(listing.image) %>" alt="Card image cap" style="height: 200px; width: 200px;">
+  <div class="card-body">
+    <h5 class="card-title"><%= listing.item_name =%></h5>
+     <h4 class="card-price">$<%= listing.price =%></h4>
+    <a href="/for_sale/<%= listing.id %>" class="btn btn-primary btn-lg btn-block">View</a>
+  </div>
+</div>
+
+  <% else %>
+
+  <div class="container">
+
+    <div class="card" style="width: 18rem;">
+      <h3>No image to show</h3>
+        <div class="card-body">
+          <h5 class="card-title"><%= listing.item_name =%></h5>
+          <h4>$<%= listing.price =%></h4>
+    <a href="/for_sale/<%= listing.id %>" class="btn btn-primary btn-lg btn-block">View</a>
+  </div>
+</div>
 
         <% end %>
 
+</div>
+</div>
 
-        <%= listing.item_name =%> <br>
-        <%= listing.description =%> <br>
-        <%= listing.price =%>
+<% end %>
 
-        <a href="/for_sale/<%= listing.id %>">View</a>
+</div>
 
-        </div>
-        </div>
-
-  <% end %>
+      <div class="container">
 
 
 <h2>Featured Wanted Items:</h2>
@@ -98,34 +122,32 @@
 <div id="row">
     <div class="col-sm-3">
 
-      <% if wanted.image.attached? %>
+        <% if wanted.image.attached? %>
 
-        <%= image_tag(wanted.image, height:320, width:200) %>
+             <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="<%= url_for(wanted.image) %>" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
 
         <% end %>
 
-<%= wanted.title =%> <br>
-<%= wanted.initial_offer =%>
+        <%= wanted.title =%> <br>
+        <%= wanted.initial_offer =%>
 
-<a href="/wanted/<%= wanted.id %>">View</a>
+        <a href="/wanted/<%= wanted.id %>">View</a>
 
 </div>
 </div>
 
 <% end %>
 
-      
+</div>
 
 </div>
-      
-      
-     <footer id="contact-signup">
-         
-                        
-    </footer>
-
-
-      
+            
 </body>
 
     

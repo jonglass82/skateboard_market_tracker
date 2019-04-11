@@ -59,32 +59,49 @@
 
 
 
-    <% @listings.each do |listing| %>
+        <% @listings.each do |listing| %>
 
-    <div id="row">
-    <div class="col-sm-4">
+            <div class="container">
 
-        <div class="container">
-                 
+        <div id="row">
+            <div class="col-sm-4">
+
         <% if listing.image.attached? %>
 
-            <%= image_tag(listing.image, height:320, width:200) %>
+        <div class="card" style="width: 18rem;">
+  <img class="img-thumbnail" src="<%= url_for(listing.image) %>" alt="Card image cap" style="height: 200px; width: 200px;">
+  <div class="card-body">
+    <h5 class="card-title"><%= listing.item_name =%></h5>
+     <h4 class="card-price">$<%= listing.price =%></h4>
+    <a href="/for_sale/<%= listing.id %>" class="btn btn-primary btn-lg btn-block">View</a>
+  </div>
+</div>
+
+        <% else %>
+
+  <div class="container">
+
+    <div class="card" style="width: 18rem;">
+      <h3>No image to show</h3>
+        <div class="card-body">
+          <h5 class="card-title"><%= listing.item_name =%></h5>
+          <h4>$<%= listing.price =%></h4>
+    <a href="/for_sale/<%= listing.id %>" class="btn btn-primary btn-lg btn-block">View</a>
+  </div>
+</div>
+
 
         <% end %>
 
-        <ul>
-            <li><%= listing.item_name %></li>
-            <li><%= listing.price %></li>
-            <li><%= listing.description %></li>
-        </ul>
 
-            <a href="/for_sale/<%= listing.id %>">View Listing</a>
+</div>
+    </div>
+
+        <% end %>
 
         </div>
-    </div>
-</div>
+    
 
-    <% end %>
     
       
 </body>
