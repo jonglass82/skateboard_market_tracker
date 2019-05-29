@@ -38,6 +38,8 @@
         <li><a href="/articles">Blog</a></li>
         <li><a href="/for_sale">For Sale</a></li>
         <li><a href="/wanted">Wanted</a></li>
+        <li><a href="/login">Log In</a></li>
+        <li><a href="/logout">Log out</a></li>
     </ul>
     
     <ul class="nav navbar-nav navbar-right">
@@ -51,6 +53,7 @@
 
 </header>
 
+<p id=”notice”><%= notice %></p>
 
 
   <body>
@@ -80,7 +83,7 @@
 
 
               <div id="row">
-                  <div class="col-xs-6">
+                  <div class="col-sm-3">
 
               
               <% if listing.image.attached? %>
@@ -130,7 +133,7 @@
 
 
               <div id="row">
-                <div class="col-xs-6">
+                <div class="col-sm-3">
 
 
                 <% if wanted.image.attached? %>

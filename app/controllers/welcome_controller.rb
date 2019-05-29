@@ -10,18 +10,9 @@ class WelcomeController < ApplicationController
       @last_four_listings = Listing.last(4)
       @last_four_wanteds = Wanted.last(4)
       @top_article = Article.last.title
+
+      @user = current_user
       
-    end
-
-
-    def create
-
-      
-    end
-
-
-    def news
-      @articles = Article.all
     end
     
     

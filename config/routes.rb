@@ -5,6 +5,13 @@ Rails.application.routes.draw do
     
     get "/main" => "welcome#main"
 
+    #users
+
+    post "/users" => "users#create"
+    post "/sessions" => "sessions#create"
+    get "/login" => "sessions#new"
+    get "/logout" => "sessions#destroy"
+
     #article and news routes for blog
     
     get "/articles" => "articles#index"
