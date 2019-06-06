@@ -16,7 +16,9 @@ class WantedController < ApplicationController
             title: params["title"], 
             initial_offer: params["initial_offer"], 
             user_id: params["user_id"], 
-            image: params["image"])
+            image: params["image"],
+            user_name: current_user.user_name
+            )
         
           render "wanted/wanted_confirmation.html.erb"
 
