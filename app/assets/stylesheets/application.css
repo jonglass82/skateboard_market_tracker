@@ -1,4 +1,9 @@
 
+body{
+  background-image: url(/assets/boards.jpg);
+  background-attachment: fixed;
+}
+
 footer{
     background-color: lightgray;
     height: 100px;
@@ -62,6 +67,31 @@ nav.li{
 #wanted-title{
   text-align: center;
   letter-spacing: 10pt;
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+}
+
+#for-sale-front-page{
+  background-color: white;
+}
+
+#wanted-front-page{
+  background-color: white;
+}
+
+.login{
+  background-color: white;
+  padding: 40px;
+}
+
+#inventory{
+  background-color: white;
+}
+
+.inventory-title{
+  text-align: center;
+  padding: 20px;
 }
 
 

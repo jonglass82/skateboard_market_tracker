@@ -53,11 +53,17 @@
 
 <body>
 
+  <div class="container">
+      <div id="inventory" class="container">
+
+        <div class="inventory-title">
+
     <h1>Current Inventory:</h1> 
+
 
 <button><a href="new_listing">Create a new listing</a></button>
 
-
+</div>
 
         <% @listings.each do |listing| %>
 
@@ -79,7 +85,8 @@
 
         <% else %>
 
-  <div class="container">
+
+
 
     <div class="card" style="width: 18rem;">
       <h3>No image to show</h3>
@@ -100,6 +107,7 @@
         <% end %>
 
         </div>
+      </div>
     
 
     
