@@ -1,19 +1,22 @@
 class SessionsController < ApplicationController
 
-    def new
-      render "login.html.erb"
+    def login
+     
     end
 
 
     def create
+
       user = User.find_by_email(params[:email])
+
       if user && user.authenticate(params[:password])
         session[:user_id] = user.id
-        redirect_to root_url, notice: "Logged in!"
+        redirect_to root_url, notice: "Logged In!"
       else
         flash.now[:alert] = "Email or password is invalid"
-        render "login.html.erb"
+        render "login"
       end
+
     end
 
 

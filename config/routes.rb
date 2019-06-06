@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
-    get "/login" => "sessions#new"
+    get "/login" => "sessions#login"
     get "/logout" => "sessions#destroy"
 
     #article and news routes for blog

@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
         title:params["title"],
         body:["body"])
 
-      redirect_to
+      redirect_to "/articles"
 
     end
     
