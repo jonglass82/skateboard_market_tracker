@@ -53,29 +53,37 @@
 
 <body>
 
-<h1>This is the blog page</h1>
 
-<a href="/new_article">Create a new blog post</a>
+
+
 
 <div class="main_content">
+
+  <h1>B L O G</h1>
+
+  <button><a href="/new_article">Create a new blog post</a></button>
 
   <a href="/main">Back to main page</a>
 
 <% @articles.each do |article|%>
 
 <div class="container">
-
+  <div id="article-body" class="container">
 
      <% if article.image.attached? %>
 
-            <%= image_tag(article.image, height:320, width:200) %>
+            <%= image_tag(article.image, height:280, width:280) %>
 
         <% end %>
+
+      
 
   <h1><%= article.title %></h1>
   <p><%= article.body %></p>
 
   <a href="article/<%= article.id %>" %> View </a>
+
+</div>
 
 </div>
 

@@ -34,6 +34,16 @@ nav.li{
 
 .main_content{
   padding: 20px;
+  text-align: center;
+  align-content: center;
+}
+
+#article-body{
+  background-color: white;
+  width: 80%;
+  border-width: 1pt;
+  border-style: solid;
+  padding: 40px;
 }
 
 #image{
@@ -87,6 +97,8 @@ nav.li{
 
 #inventory{
   background-color: white;
+  border-style: solid;
+  padding: 40px;
 }
 
 .inventory-title{
