@@ -64,25 +64,36 @@
       <p id=”alert”><%= alert %></p>
 
 
-      <form action="/sessions" method="post">
+      <form action="/users" method="post">
 
-        <h1>Login</h1>
+        <h1>Create an Account</h1>
 
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+            <div class="form-group">
+          <label><h3>User Name</h3></label>
+          <input type="user_name" class="form-control" name="user_name" value="" />
+        </div>
 
         <div class="form-group">
           <label><h3>Email:</h3></label>
           <input type="email" class="form-control" name="email" value="" />
         </div>
+
         <div class="form-group">
           <label><h3>Password:</h3></label>
           <input type="password" class="form-control" name="password" value="" />
         </div>
+
+        <div class="form-group">
+          <label><h3>Password Confirmation:</h3></label>
+          <input type="password_confirmation" class="form-control" name="password_confirmation" value="" />
+        </div>
+
+
         <input type="submit" class="btn btn-primary" value="Submit" />
 
       </form>
-
-      <h3>New user? Create an account <a href="/users">HERE</a></h3>
 
 
     </div>
