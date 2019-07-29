@@ -39,7 +39,7 @@
     </ul>
     
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Follow Us On INSTAGRAM <i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://www.instagram.com/jonglasss/?hl=en">Follow Us On INSTAGRAM <i class="fa fa-instagram"></i></a></li>
     </ul>
     
     </div>
@@ -60,8 +60,9 @@
 
     <h1>Current Inventory:</h1> 
 
-
+<% if current_user %>
 <button><a href="new_listing">Create a new listing</a></button>
+<% end %>
 
 </div>
 
@@ -70,12 +71,12 @@
             <div class="container">
 
         <div id="row">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
 
         <% if listing.image.attached? %>
 
         <div class="card" style="width: 18rem;">
-  <img class="img-thumbnail" src="<%= url_for(listing.image) %>" alt="Card image cap" style="height: 200px; width: 200px;">
+  <img class="img-thumbnail" src="<%= url_for(listing.image) %>" alt="Card image cap" style="height: 400px; width: 200px;">
   <div class="card-body">
     <h5 class="card-title"><%= listing.item_name =%></h5>
      <h4 class="card-price">$<%= listing.price =%></h4>

@@ -4,7 +4,7 @@
 
      <% if @listing.image.attached? %>
 
-            <%= image_tag(@listing.image) %>
+            <%= image_tag(@listing.image, height:280, width:200) %>
      <% else %>
 
           <h2>No image to show</h2>

@@ -40,7 +40,7 @@
     </ul>
     
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Follow Us On INSTAGRAM <i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://www.instagram.com/jonglasss/?hl=en">Follow Us On INSTAGRAM <i class="fa fa-instagram"></i></a></li>
     </ul>
     
     </div>
@@ -61,7 +61,10 @@
 
   <h1>B L O G</h1>
 
-  <button><a href="/new_article">Create a new blog post</a></button>
+  <% if current_user %>
+    <button><a href="/new_article">Create a new blog post</a></button>
+  <% end %>
+
 
   <a href="/main">Back to main page</a>
 

@@ -9,7 +9,7 @@ class WelcomeController < ApplicationController
       @wanteds = Wanted.all
       @last_four_listings = Listing.last(4)
       @last_four_wanteds = Wanted.last(4)
-      @top_article = Article.last.title
+      @top_article = Article.last
       
     end
     

@@ -14,7 +14,6 @@ def create
     )
 
     if user.save
-      # render json: {message: 'User created successfully'}, status: :created
 
       redirect_to "/login", alert: "Your account has been create! Please log in"
 

@@ -40,7 +40,7 @@
     </ul>
     
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Follow Us On INSTAGRAM <i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://www.instagram.com/jonglasss/?hl=en">Follow Us On INSTAGRAM <i class="fa fa-instagram"></i></a></li>
     </ul>
     
     </div>
@@ -58,7 +58,7 @@
 
         <% if @wanted.image.attached? %>
 
-            <%= image_tag(@wanted.image, height:320, width:200) %>
+            <%= image_tag(@wanted.image, height:280, width:200) %>
 
         <% else %>
         <h3>No image attached </h3>
@@ -75,9 +75,11 @@
 <br>
 <br>
 
-<a href="/wanted/<%= @wanted.id %>/edit">EDIT</a>
+        <% if current_user %>
+        <a href="/wanted/<%= @wanted.id %>/edit">EDIT</a>
 
-<a href="/wanted/<%= @wanted.id %>" data-method="delete" rel="nofollow">DELETE</a>
+        <a href="/wanted/<%= @wanted.id %>" data-method="delete" rel="nofollow">DELETE</a>
+        <% end %>
 
 
 <a href="/wanted">Back to wanted listings</a>
