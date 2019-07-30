@@ -15,9 +15,8 @@ class WantedController < ApplicationController
           @wanted = Wanted.create(
             title: params["title"], 
             initial_offer: params["initial_offer"], 
-            user_id: params["user_id"], 
-            image: params["image"],
-            user_name: current_user.user_name
+            user_id: current_user.id, 
+            image: params["image"]
             )
         
           render "wanted/wanted_confirmation.html.erb"

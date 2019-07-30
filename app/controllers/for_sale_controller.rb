@@ -16,7 +16,7 @@ class ForSaleController < ApplicationController
             item_name: params["item_name"], 
             description: params["description"], 
             price: params["price"], 
-            user_id: params["user_id"], 
+            user_id: current_user.id, 
             image: params["image"])
       
         render "for_sale/for_sale_confirmation.html.erb"

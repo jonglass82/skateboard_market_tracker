@@ -17,17 +17,26 @@ nav.li{
 }
 
 #description_box .input{
-    height: 300px;
-    width: 200px;
+  height: 300px;
+  width: 200px;
 }
 
 #newlisting{
-    align-content: center;
+  align-content: center;
 }
 
 .jumbotron{
   text-align: center;
   height: 300px;
+}
+
+.jumbo-title{
+  background-color: black;
+  font-size: 40pt;
+  color: white;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 20pt;
 }
 
 .main_content{
