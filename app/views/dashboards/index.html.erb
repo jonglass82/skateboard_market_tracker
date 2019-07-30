@@ -1,0 +1,16 @@
+<h1>My dashboard</h1>
+
+<h3>My listings</h3>
+<% @my_listings.each do |listing|%>
+  <ul>
+    <li><%= listing.item_name %>
+  </ul>
+<% end %>
+
+
+<h3>My wanteds</h3>
+<% @my_wanteds.each do |wanted|%>
+  <ul>
+    <li><%= wanted.title %>
+  </ul>
+<% end %>

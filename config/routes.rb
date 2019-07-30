@@ -60,6 +60,10 @@ Rails.application.routes.draw do
     patch "/wanted/:id" => "wanted#update"
 
     delete "/wanted/:id" => "wanted#destroy"
+
+    #user dashboard
+
+    get "/dashboard" => "dashboards#index"
   
 
 end
