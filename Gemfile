@@ -8,6 +8,8 @@ gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '>= 1.4.1'
 # gem 'pg', '~> 0.18.4'
+gem 'figaro'
+gem 'cloudinary'
 
 gem 'table_print'
 # Use Puma as the app server

@@ -73,13 +73,7 @@
 <div class="container">
   <div id="article-body" class="container">
 
-     <% if article.image.attached? %>
-
-            <%= image_tag(article.image, height:280, width:280) %>
-
-        <% end %>
-
-      
+  <img src="<%= article.image_url %>" height="400px" width="400px">
 
   <h1><%= article.title %></h1>
   <p><%= article.body %></p>

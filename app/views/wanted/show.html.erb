@@ -56,14 +56,7 @@
 
     <h1>Wanted Listing:</h1>
 
-        <% if @wanted.image.attached? %>
-
-            <%= image_tag(@wanted.image, height:280, width:200) %>
-
-        <% else %>
-        <h3>No image attached </h3>
-
-        <% end %>
+        <img src="<%= @wanted.image_url %>" height="400px" width="200px">
 
         <%= @wanted.title %>
 

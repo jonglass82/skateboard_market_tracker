@@ -67,32 +67,17 @@
         <div id="row">
             <div class="col-sm-3">
 
-        <% if listing.image.attached? %>
-
         <div class="card" style="width: 18rem;">
-  <img class="img-thumbnail" src="<%= url_for(listing.image) %>" alt="Card image cap" style="height: 400px; width: 200px;">
-  <div class="card-body">
-    <h5 class="card-title"><%= listing.item_name =%></h5>
-     <h4 class="card-price">$<%= listing.price =%></h4>
-     <span class="card-price">Posted by: <%= listing.user.user_name %></span>
-    <a href="/for_sale/<%= listing.id %>" class="btn btn-primary btn-lg btn-block">View</a>
-  </div>
+  <img src="<%= listing.image_url %>" height="400px" width="200px">
+            <div class="card-body">
+              <h5 class="card-title"><%= listing.item_name =%></h5>
+               <h4 class="card-price">$<%= listing.price =%></h4>
+               <span class="card-price">Posted by: <%= listing.user.user_name %></span>
+              <a href="/for_sale/<%= listing.id %>" class="btn btn-primary btn-lg btn-block">View</a>
+            </div>
 
-        <% else %>
-
-    <div class="card" style="width: 18rem;">
-      <h3>No image to show</h3>
-        <div class="card-body">
-          <h5 class="card-title"><%= listing.item_name =%></h5>
-          <h4>$<%= listing.price =%></h4>
-          <span class="card-price">Posted by: <%= listing.user.user_name %></span>
-    <a href="/for_sale/<%= listing.id %>" class="btn btn-primary btn-lg btn-block">View</a>
-  </div>
-
-        <% end %>
-
+        </div>
           </div>
-              </div>
 
         <% end %>
 

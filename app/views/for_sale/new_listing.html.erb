@@ -66,7 +66,9 @@
 
   <h4>Price:</h4><input type="price" name="price"><br>
 
-  <p><input type="file" name="image">
+  <input type="hidden" id="user_id" name="user_id" value=<%= current_user.id %> >
+
+  <p><input type="file" name="image_url">
 
   <input type="submit" name="" value="Create listing"/>
 

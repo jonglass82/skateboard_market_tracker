@@ -83,3 +83,6 @@ build-iPhoneSimulator/
 >>>>>>> f9bdd2af02e184e69e90bf4bf85f5456a4e25ab3
 
 Gemfile.lock
+
+# Ignore application configuration
+/config/application.yml

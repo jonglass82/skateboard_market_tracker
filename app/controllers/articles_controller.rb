@@ -9,10 +9,13 @@ class ArticlesController < ApplicationController
     end
     
     def create
+        response = Cloudinary::Uploader.upload(params[:image_url])
+        cloudinary_url = response["secure_url"]
+
       @article = Article.create(
         title:params["title"],
         body: params["body"],
-        image:params["image"])
+        image_url: cloudinary_url)
 
       redirect_to "/articles"
     end

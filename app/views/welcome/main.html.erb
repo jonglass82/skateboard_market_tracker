@@ -75,6 +75,12 @@
 
       
   <div class="jumbotron">
+      <div class="jumbotron" style="background-image: url(<%= @top_article.image_url %>); background-size: 100%;">
+    <div class="jumbo-title"
+    <h1 class="display-4"> <%= @top_article.title %></h1>
+      <p class="lead"></p>
+    </div>
+  </div>
     <div class="jumbo-title">
     <h1 class="display-4"> hello </h1>
       <p class="lead"></p>
@@ -100,38 +106,19 @@
               <div id="row">
                   <div class="col-sm-3">
 
-              
-              <% if listing.image.attached? %>
-
-
                   <div class="card" style="width: 18rem;">
-                  <img class="img-thumbnail" src="<%= url_for(listing.image) %>" alt="Card image cap" style="height: 400px; width: 200px;">
+                   <img src="<%= listing.image_url %>" height="400px" width="200px">
                   <div class="card-body">
                   <h5 class="card-title"><%= listing.item_name =%></h5>
                   <h4 class="card-price">$<%= listing.price =%></h4>
 
                   <a href="/for_sale/<%= listing.id %>" class="btn btn-primary btn-block">View</a>
                   </div>
-                  </div>
+                  </div>               
 
-
-              <% else %>
-
-                 
-
-                  <div class="card" style="width: 18rem;">
-                  <h3>No image to show</h3>
-                  <div class="card-body">
-                  <h5 class="card-title"><%= listing.item_name =%></h5>
-                  <h4>$<%= listing.price =%></h4>
-                  <a href="/for_sale/<%= listing.id %>" class="btn btn-primary btn-block">View</a>
-                  </div>
-               
-
-              <% end %>
-
-</div>
-</div>
+          
+              </div>
+                </div>
 
 <% end %>
 
@@ -151,28 +138,13 @@
                 <div class="col-sm-3">
 
 
-                <% if wanted.image.attached? %>
-
-
                     <div class="card" style="width: 18rem;">
-                    <img class="img-thumbnail" src="<%= url_for(wanted.image) %>" alt="Card image cap" style="height: 200px; width: 200px;">
+                              <img src="<%= wanted.image_url %>" height="400px" width="200px">
                     <div class="card-body">
                     <h5 class="card-title"><%= wanted.title =%></h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="/wanted/<%= wanted.id %>" class="btn btn-primary btn-block">Go somewhere</a>
                     </div>
-
-                <% else %>
-
-                    <div class="card" style="width: 18rem;">
-                    <h3>No image to show</h3>
-                    <div class="card-body">
-                    <h5 class="card-title"><%= wanted.title =%></h5>
-                    <h4>$<%= wanted.initial_offer =%></h4>
-                    <a href="/wanted/<%= wanted.id %>" class="btn btn-primary btn-block">View</a>
-                    </div>
-
-                <% end %>
 
 
 </div>

@@ -2,12 +2,7 @@
 
 <h1>Here is your article</h1>
 
-      <% if @article.image.attached? %>
-
-        <%= image_tag(@article.image, height:320, width:200) %>
-
-      <% end %>
-
+  <img src="<%= @article.image_url %>" height="400px" width="400px">
         
 <%= @article.title %>
 <%= @article.body %>

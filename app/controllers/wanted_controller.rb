@@ -11,12 +11,14 @@ class WantedController < ApplicationController
         
         
     def create
+        response = Cloudinary::Uploader.upload(params[:image_url])
+        cloudinary_url = response["secure_url"]
 
           @wanted = Wanted.create(
             title: params["title"], 
             initial_offer: params["initial_offer"], 
-            user_id: current_user.id, 
-            image: params["image"]
+            user_id: params["user_id"], 
+            image_url: cloudinary_url
             )
         
           render "wanted/wanted_confirmation.html.erb"

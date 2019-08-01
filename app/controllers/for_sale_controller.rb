@@ -11,13 +11,15 @@ class ForSaleController < ApplicationController
     
     
     def create
+        response = Cloudinary::Uploader.upload(params[:image_url])
+        cloudinary_url = response["secure_url"]
 
         @listing = Listing.create(
             item_name: params["item_name"], 
             description: params["description"], 
             price: params["price"], 
-            user_id: current_user.id, 
-            image: params["image"])
+            user_id: params["user_id"], 
+            image_url: cloudinary_url)
       
         render "for_sale/for_sale_confirmation.html.erb"
     end
@@ -42,7 +44,6 @@ class ForSaleController < ApplicationController
         @listing.save
 
         render "listing_update_confirmation.html.erb"
-
     end
 
 
