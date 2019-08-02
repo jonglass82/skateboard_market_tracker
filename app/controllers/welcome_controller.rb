@@ -10,6 +10,8 @@ class WelcomeController < ApplicationController
       @last_four_listings = Listing.last(4)
       @last_four_wanteds = Wanted.last(4)
       @top_article = Article.last
+
+      puts @top_article.image_url
       
     end
     
