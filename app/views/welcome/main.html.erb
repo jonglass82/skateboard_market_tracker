@@ -65,7 +65,7 @@
 
 
 
-  <body>
+  <body style="background-image: url('https://res.cloudinary.com/dbln7wsqw/image/upload/v1564717533/ehhui6kqmaw5sjiypamq.jpg'); background-attachment: fixed;">
 
     <p id=”notice”><h3><%= notice %></h3></p>
 
@@ -75,8 +75,8 @@
 
       
   <div class="jumbotron">
-      <div class="jumbotron">
-    <div class="jumbo-title"
+      <div class="jumbotron" style="background-image: url(<%= @top_article.image_url %>); background-size: 100%;">
+    <div class="jumbo-title">
     <h1 class="display-4"> <%= @top_article.title %></h1>
       <p class="lead"></p>
     </div>
