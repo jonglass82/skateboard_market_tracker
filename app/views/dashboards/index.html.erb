@@ -1,6 +1,14 @@
-<h1>My dashboard</h1>
+<h1>Dashboard for <%= current_user.user_name %> </h1>
 
-<h3>My listings</h3>
+<h3>Avatar:</h3>
+
+<h3>Stars/likes</h3>
+
+<h3>Bio:</h3>
+
+<h3>My Collection:</h3>
+
+<h3>My items listed for sale:</h3>
 <% @my_listings.each do |listing|%>
   <ul>
     <li><%= listing.item_name %>
@@ -8,7 +16,7 @@
 <% end %>
 
 
-<h3>My wanteds</h3>
+<h3>Wanted Items:</h3>
 <% @my_wanteds.each do |wanted|%>
   <ul>
     <li><%= wanted.title %>
