@@ -17,30 +17,3 @@
 //= require chartkick
 //= require_tree 
 
-  // data: function() {
-  //   return {
-  //     title: "",
-  //     body: "",
-  //     image: ""
-  //   };
-  // },
-  // created: function() {},
-  // methods: {
-  //   setFile: function(event) {
-  //     if (event.target.files.length > 0) {
-  //       this.image = event.target.files[0];
-  //     }
-  //   },
-  //   submit: function() {
-  //     var formData = new FormData();
-  //     formData.append("title", this.title);
-  //     formData.append("body", this.body);
-  //     formData.append("image", this.image);
-
-  //     axios.post("http://localhost:3000/api/posts", formData).then(response => {
-  //       this.title = "";
-  //       this.body = "";
-  //       this.$refs.fileInput.value = "";
-  //     });
-  //   }
-  // },
