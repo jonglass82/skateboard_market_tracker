@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   end
 
-def create
+  def create
     user = User.new(
       user_name: params[:user_name],
       email: params[:email],
@@ -20,6 +20,11 @@ def create
       render json: {errors: user.errors.full_messages}, status: :bad_request
     end
   end
+
+   def show
+        @user = User.find_by_id(params["id"])
+        render "users/show.html.erb"
+    end
 
 
 end

@@ -59,96 +59,40 @@
 
 </header>
 
-
-  <body style="background-image: url('https://res.cloudinary.com/dbln7wsqw/image/upload/v1564717533/ehhui6kqmaw5sjiypamq.jpg'); background-attachment: fixed;">
-
-    <p id=”notice”><h3><%= notice %></h3></p>
-
-        <% if current_user %>
-      Welcome back <%= current_user.user_name %>!
-        <% end %>
-
-      
-  <div class="jumbotron">
-      <div class="jumbotron" style="background-image: url(<%= @top_article.image_url %>); background-size: 100%;">
-    <div class="jumbo-title">
-    <h1 class="display-4"> <%= @top_article.title %></h1>
-      <p class="lead"></p>
-    </div>
-  </div>
-    <div class="jumbo-title">
-    <h1 class="display-4"> hello </h1>
-      <p class="lead"></p>
-    </div>
-  </div>
+<body>
 
 
-
-  <div class="container">   
-
-  <div id="for-sale-front-page" class="container"> 
-
-     
-       <h2>Recently Listed For Sale:</h2>
-
-          <% @last_four_listings.each do |listing| %>
+<h1>Page for <%= @user.user_name %></h1>
 
 
-              <div id="row">
-                  <div class="col-sm-3">
+<h1><%= @user.user_name %> 's collection</h1>
 
-                  <div class="card" style="width: 18rem;">
+<h1><%= @user.user_name %> 's items for sale</h1>
+
+<% @user.listings.each do |listing| %>
+  
+        <div id="row">
+            <div class="col-sm-3">
+
+              <div class="card" style="width: 18rem;">
                    <img src="<%= listing.image_url %>" height="400px" width="200px">
-            <div class="card-body">
-              <h5 class="card-title"><%= listing.item_name =%></h5>
-              <h5 class="card-title">User: <a href="/users/<%= listing.user_id %>"><%= listing.user.user_name %></a></h5>
+                <div class="card-body">
+                 <h5 class="card-title"><%= listing.item_name =%></h5>
+
                 <h4 class="card-price">$<%= listing.price =%></h4>
                   <a href="/for_sale/<%= listing.id %>" class="btn btn-primary btn-block">View</a>
                   </div>
-                  </div>               
+              </div>               
 
           
-              </div>
-                </div>
+           </div>
+        </div>
 
 <% end %>
 
 </div>
 
-     <div id="wanted-front-page" class="container">
 
-
-            <h2>Featured Wanted Items:</h2>
-
-      <% @last_four_wanteds.each do |w| %>
-
-    <div id="wanted" class="container">
-        <b><%= w.title %></b>   |   
-        Initial Offer : <b>$<%= w.initial_offer %></b>   | 
-        User: <a href="/users/<%= w.user_id %>"><%= w.user.user_name %></a>   |
-
-        <a href="wanted/<%= w.id %>" %> View </a>
-
-    </div>
-     <% end %>
-
-</div>
-
-   
-
-
-    </div>
-
-
- <script src="js/bootstrap.min.js"></script>
-            
 </body>
 
-<footer></footer>
-
-  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    
 </html>
-

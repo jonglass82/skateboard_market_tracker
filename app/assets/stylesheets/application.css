@@ -1,6 +1,7 @@
 body{
   background-image: url(/assets/boards.jpg);
   background-attachment: fixed;
+  padding: 5px;
 }
 
 footer{
@@ -74,7 +75,7 @@ nav.li{
 
 #wanted{
   text-align: center;
-  background-color: lightyellow;
+  background-color: white;
   border-width: 1pt;
   border-bottom-style: dotted;
   padding: 10px;
@@ -124,7 +125,7 @@ nav .navbar-nav li a{
   }
 
 nav .navbar-nav li a:hover{
-color: lightgrey !important;
+color: grey !important;
 }
 
 .navbar-brand{
@@ -133,6 +134,11 @@ color: lightgrey !important;
 
 .icon-bar{
   background-color: #7cd0f7;
+}
+
+footer{
+  height: 200px;
+  background-color: black;
 }
 
 
