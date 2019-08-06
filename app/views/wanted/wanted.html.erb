@@ -82,7 +82,7 @@
     <div id="wanted" class="container">
         <b><%= w.title %></b>   |   
         Initial Offer : <b>$<%= w.initial_offer %></b>   | 
-        Posted By: <b> <%= w.user.user_name %>  |
+        User: <a href="/users/<%= w.user_id %>"><%= w.user.user_name %></a>   |
 
         <a href="wanted/<%= w.id %>" %> View </a>
 
