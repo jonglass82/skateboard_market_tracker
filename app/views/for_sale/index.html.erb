@@ -66,7 +66,10 @@
 
 </div>
 
+
         <% @listings.each do |listing| %>
+
+        <% if listing.is_available? %>
 
         <div id="row">
             <div class="col-sm-3">
@@ -83,6 +86,8 @@
 
         </div>
           </div>
+
+          <% end %>
 
         <% end %>
 
